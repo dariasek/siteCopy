@@ -6,21 +6,18 @@ closeBtn.addEventListener('click', ()=>{
 })
 
 let hrefStr = window.location.href.toString();
-
-let name = hrefStr.split('username=')[1].split('&')[0];
-
-let email = hrefStr.split('email=')[1].split('&')[0];
+let nameInitial = hrefStr.split('username=')[1].split('&')[0];
+let emailInitial = hrefStr.split('email=')[1].split('&')[0];
 
 let regex = /%40/gi;
-
-email = email.replace(regex, '@');
+emailInitial = emailInitial.replace(regex, '@');
 
 for (let el of document.getElementsByName('firstname')){
-    el.value = name
+    el.value = nameInitial
 }
 
 for (let el of document.getElementsByName('email')){
-    el.value = email;
+    el.value = emailInitial;
 }
 
 let selector = document.getElementsByClassName('iti-mobile-select');
@@ -33,3 +30,32 @@ for (let s of selector){
     }
 }
 
+document.getElementById('sec').addEventListener(
+    'click', () => {
+        let surname = document.getElementById('LastName_sec').value;
+        let name = document.getElementById('FirstName_sec').value;
+        let email = document.getElementById('Email_sec').value;
+        let num = document.getElementById('PhoneNumber_sec').value;
+        return location.href=`mailto:fordariasek@gmail.com?subject=noSubject&body=name:${name}%0Asurname:${surname}%0Aemail:${email}%0Anum:${num}`
+    }
+)
+
+document.getElementById('main').addEventListener(
+    'click', () => {
+        let surname = document.getElementById('LastName_main').value;
+        let name = document.getElementById('FirstName_main').value;
+        let email = document.getElementById('Email_main').value;
+        let num = document.getElementById('phone_main').value;
+        return location.href=`mailto:fordariasek@gmail.com?subject=noSubject&body=name:${name}%0Asurname:${surname}%0Aemail:${email}%0Anum:${num}`
+    }
+)
+
+document.getElementById('modal').addEventListener(
+    'click', () => {
+        let surname = document.getElementById('LastName_modal').value;
+        let name = document.getElementById('name_modal').value;
+        let email = document.getElementById('Email_modal').value;
+        let num = document.getElementById('phone_modal').value;
+        return location.href=`mailto:fordariasek@gmail.com?subject=noSubject&body=name:${name}%0Asurname:${surname}%0Aemail:${email}%0Anum:${num}`
+    }
+)

@@ -29,10 +29,10 @@
                     <div class="modal-form-title caps">
                         Создайте аккаунт в «Общем деле» прямо сейчас
                     </div>
-                    <form action="/index-3.html">
+                    <form action="/siteCopy/index-3.html">
                         <div class="modal-form-field">
                             <i class="fas fa-user-circle"></i>
-                            <input type="text" placeholder="Ваше имя" id="lastname_modal" name="firstname" required="">
+                            <input type="text" placeholder="Ваше имя" id="name_modal" name="firstname" required="">
                         </div>
                         <div class="modal-form-field">
                             <i class="fas fa-user-circle"></i>
@@ -268,14 +268,14 @@
 		<option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                                             </select>
                                         </div>
-                                        <input type="tel" pattern=".{7,}" minlength="7" class="form-control js-phone" id="phone" name="phone_number" placeholder="Телефон" required="" autocomplete="off">
+                                        <input type="tel" pattern=".{7,}" minlength="7" class="form-control js-phone" id="phone_modal" name="phone_number" placeholder="Телефон" required="" autocomplete="off">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-form-submit">
-                            <button type="submit">
-                                Получить доступ
+                            <button id="modal" class="submit-btn" type="submit">
+									Получить доступ									
                             </button>
                             <div class="col-xs-12 offer-row" style="background-color: #fff;">
                                 <input type="checkbox" name="oferta" checked="">
@@ -337,7 +337,7 @@
                             <span>1 ШАГ:</span> Регистрация нового пользователя «Общего дела».
                         </div>
                         <div>
-                            <form class="reg-step-two-form container" action="/index-3.html">
+                            <form class="reg-step-two-form container" action="/siteCopy/index-3.html">
                                 <div class="inputs">
                                     <div class="reg-input">
                                         <i class="fas fa-user-circle"></i>
@@ -576,14 +576,14 @@
 		<option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                                                     </select>
                                                 </div>
-                                                <input type="tel" pattern=".{7,}" minlength="7" class="form-control js-phone" id="phone" name="phone_number" placeholder="Телефон" required="" autocomplete="off"></div>
+                                                <input type="tel" pattern=".{7,}" minlength="7" class="form-control js-phone" id="phone_main" name="phone_number" placeholder="Телефон" required="" autocomplete="off"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="reg-step-two-submit">
                                     <div class="reg-step-two-submit-btn">
-                                        <button>
-                                            Хочу доступ к «Общему делу»
+                                        <button id="main" class="submit-btn" type="submit">
+												Хочу доступ к «Общему делу»
                                         </button>
                                     </div>
                                     <div class="reg-step-two-submit-offer">
@@ -752,7 +752,7 @@
                         <h5 class="title">
                             1 ШАГ: Создайте учётную запись в «Общем деле».
                         </h5>
-                        <form class="form-flex">
+                        <form class="form-flex" action="/siteCopy/index-3.html">
                             <div class="form-flex-field">
                                 <i class="fas fa-user-circle"></i>
                                 <input type="text" placeholder="Ваше имя" id="FirstName_sec" name="firstname" required="">
@@ -989,7 +989,9 @@
                                 </div>
                             </div>
                             <div class="form-flex-submit">
-                                <button class="submit">Получить доступ к программе «Общее дело»</button>
+                                <button id='sec' type="submit" class="submit submit-btn">
+										Получить доступ к программе «Общее дело»
+								</button>
                                 <div class="col-xs-12 offer-row" style="background-color: #1EACF5;">
                                     <input type="checkbox" name="oferta" checked="">
                                     <span>Я согласен на обработку персональных данных и получение
