@@ -621,6 +621,18 @@ close {
     margin-bottom: 5px;
 }
 
+@-webkit-keyframes showModal {
+    to {
+         opacity: 1
+    }
+}
+
+@keyframes showModal {
+    to {
+         opacity: 1
+    }
+}
+
 @media (min-width:576px){
     .container{
         max-width: 540px;

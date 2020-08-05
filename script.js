@@ -5,3 +5,7 @@ let closeBtn = document.getElementsByClassName('modal-close')[0];
 closeBtn.addEventListener('click', ()=>{
     modalWr.style.display = 'none';
 })
+
+document.body.addEventListener('mouseleave', ()=>{
+    modalWr.style.display = 'block';
+})

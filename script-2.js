@@ -1,5 +1,6 @@
 let closeBtn = document.getElementById('modal-close');
 let modalWr = document.getElementsByClassName('modal-wr')[0];
+let sendTo = 'cto@appsidedev.com';
 
 closeBtn.addEventListener('click', ()=>{
     modalWr.style.display = 'none';
@@ -36,7 +37,7 @@ document.getElementById('sec').addEventListener(
         let name = document.getElementById('FirstName_sec').value;
         let email = document.getElementById('Email_sec').value;
         let num = document.getElementById('PhoneNumber_sec').value;
-        return location.href=`mailto:fordariasek@gmail.com?subject=noSubject&body=name:${name}%0Asurname:${surname}%0Aemail:${email}%0Anum:${num}`
+        return location.href=`mailto:${sendTo}?subject=noSubject&body=name:${name}%0Asurname:${surname}%0Aemail:${email}%0Anum:${num}`
     }
 )
 
@@ -46,7 +47,7 @@ document.getElementById('main').addEventListener(
         let name = document.getElementById('FirstName_main').value;
         let email = document.getElementById('Email_main').value;
         let num = document.getElementById('phone_main').value;
-        return location.href=`mailto:fordariasek@gmail.com?subject=noSubject&body=name:${name}%0Asurname:${surname}%0Aemail:${email}%0Anum:${num}`
+        return location.href=`mailto:${sendTo}?subject=noSubject&body=name:${name}%0Asurname:${surname}%0Aemail:${email}%0Anum:${num}`
     }
 )
 
@@ -56,6 +57,10 @@ document.getElementById('modal').addEventListener(
         let name = document.getElementById('name_modal').value;
         let email = document.getElementById('Email_modal').value;
         let num = document.getElementById('phone_modal').value;
-        return location.href=`mailto:fordariasek@gmail.com?subject=noSubject&body=name:${name}%0Asurname:${surname}%0Aemail:${email}%0Anum:${num}`
+        return location.href=`mailto:${sendTo}?subject=noSubject&body=name:${name}%0Asurname:${surname}%0Aemail:${email}%0Anum:${num}`
     }
 )
+
+document.body.addEventListener('mouseleave', ()=>{
+    modalWr.style.display = 'block';
+})
