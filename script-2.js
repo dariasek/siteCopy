@@ -7,8 +7,8 @@ closeBtn.addEventListener('click', ()=>{
 })
 
 let hrefStr = window.location.href.toString();
-let nameInitial = hrefStr.split('main_form-name=')[1].split('&')[0];
-let emailInitial = hrefStr.split('main_form-email=')[1].split('&')[0];
+let nameInitial = hrefStr.split('username=')[1].split('&')[0];
+let emailInitial = hrefStr.split('email=')[1].split('&')[0];
 
 let regex = /%40/gi;
 emailInitial = emailInitial.replace(regex, '@');
